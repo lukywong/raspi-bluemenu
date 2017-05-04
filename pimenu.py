@@ -136,7 +136,7 @@ class PiMenu(Frame):
             )
 
             if item['name'] == 'scan':
-                btn.configure(command=lambda act=act: self.bluetooth_classic_scan(act, wrap), )
+                btn.configure(command=lambda act=act: self.bluetooth_classic_scan(wrap), )
             elif 'items' in item:
                 # this is a deeper level
                 btn.configure(command=lambda act=act, item=item: self.show_items(item['items'], act), text=item['label']+'…')
