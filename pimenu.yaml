@@ -1,0 +1,28 @@
+# Menu-Setup.
+#
+# name and label are required for each item
+# color and icon are optional
+# only gifs (48x48) are supported
+#
+---
+  - 
+    name: "andi"
+    label: "运行"
+    color: "#603cba"
+    icon: "fish"
+    items: 
+      - 
+        name : "banking"
+        label: "Banking"
+        color: "#603cba"
+        icon : "currency.dollar"
+      -
+        name : "other"
+        label: "Other"
+        color: "#603cba"
+        icon : "cabinet.files.variant"
+  - 
+    name: "kaddi"
+    label: "蓝牙"
+    color: "#9f00a7"
+    icon: "bunny"
