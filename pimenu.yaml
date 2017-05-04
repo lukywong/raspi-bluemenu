@@ -7,6 +7,6 @@
 ---
   - 
     name: "scan"
-    label: "Bluetooth"
+    label: "Bluetooth Scan"
     color: "#603cba"
     icon: "fish"
