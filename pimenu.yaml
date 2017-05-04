@@ -7,6 +7,11 @@
 ---
   - 
     name: "scan"
-    label: "Bluetooth Scan"
+    label: "Scan"
     color: "#603cba"
     icon: "fish"
+  - 
+    name: "kaddi"
+    label: "Execute"
+    color: "#9f00a7"
+    icon: "bunny"

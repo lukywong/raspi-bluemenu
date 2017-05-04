@@ -210,8 +210,11 @@ class PiMenu(Frame):
         This scan finds ONLY Bluetooth (non-BLE) devices in pairing mode
         """
         devs = bt.discover_devices(duration=scansec, flush_cache=True, lookup_names=True)
+        
+        svc = DiscoveryService()
+        devs = devs + svc.discover(timeout)
 
-        print('found {} Bluetooth (non-BLE) devices in pairing mode:'.format(len(devs)))
+        print('found {} Bluetooth (non-BLE and BLE) devices in pairing mode:'.format(len(devs)))
 
         num = 1
         all = len(devs) + num
