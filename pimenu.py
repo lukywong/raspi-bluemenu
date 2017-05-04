@@ -127,7 +127,7 @@ class PiMenu(Frame):
             if 'icon' in item:
                 image = self.get_icon(item['icon'])
             else:
-                image = self.get_icon('scrabble.'+item['label'][0:1].lower())
+                image = self.get_icon('scrabble.' + item['label'][0:1].lower())
 
             btn = FlatButton(
                 wrap,
