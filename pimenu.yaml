@@ -10,8 +10,3 @@
     label: "Bluetooth"
     color: "#603cba"
     icon: "fish"
-  - 
-    name: "kaddi"
-    label: "Execute"
-    color: "#9f00a7"
-    icon: "bunny"
