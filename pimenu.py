@@ -205,7 +205,7 @@ class PiMenu(Frame):
         while len(self.framestack) > 1:
             self.destroy_top()
         
-    def bluetooth_classic_scan(self, wrap)
+    def bluetooth_classic_scan(self, wrap, scansec=10)
         """
         This scan finds ONLY Bluetooth (non-BLE) devices in pairing mode
         """
