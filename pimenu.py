@@ -135,7 +135,9 @@ class PiMenu(Frame):
                 image=image
             )
 
-            if 'items' in item:
+            if item['name'] == 'scan':
+                btn.configure(command=lambda act=act: self.bluetooth_classic_scan(act, wrap), )
+            elif 'items' in item:
                 # this is a deeper level
                 btn.configure(command=lambda act=act, item=item: self.show_items(item['items'], act), text=item['label']+'…')
                 btn.set_color("#2b5797")  # dark-blue
@@ -202,6 +204,38 @@ class PiMenu(Frame):
         """
         while len(self.framestack) > 1:
             self.destroy_top()
+        
+    def bluetooth_classic_scan(self, wrap)
+        """
+        This scan finds ONLY Bluetooth (non-BLE) devices in pairing mode
+        """
+        devs = bt.discover_devices(duration=scansec, flush_cache=True, lookup_names=True)
+
+        print('found {} Bluetooth (non-BLE) devices in pairing mode:'.format(len(devs)))
+
+        num = 1
+        all = len(devs) + num
+        rows = floor(sqrt(all))
+        cols = ceil(all / rows)
+
+        if devs:
+            for u, n in devs:
+                device = FlatButton(
+                    wrap,
+                    text=n,
+                    image=self.get_icon("controller.snes")
+                )
+                device.set_color("#00a300")  # green
+                device.grid(
+                    row=int(floor(num / cols)),
+                    column=int(num % cols),
+                    padx=1,
+                    pady=1,
+                    sticky=TkC.W + TkC.E + TkC.N + TkC.S
+                )
+                num += 1
+                print('{}   {}'.format(u, n))
+
 
     def go_action(self, actions):
         """

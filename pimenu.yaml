@@ -6,16 +6,10 @@
 #
 ---
   - 
-    name: "bluetooth"
+    name: "scan"
     label: "Bluetooth"
     color: "#603cba"
     icon: "fish"
-    items: 
-      - 
-        name : "banking"
-        label: "Searching..."
-        color: "#603cba"
-        icon : "currency.dollar"
   - 
     name: "kaddi"
     label: "Execute"
