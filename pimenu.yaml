@@ -6,23 +6,18 @@
 #
 ---
   - 
-    name: "andi"
-    label: "运行"
+    name: "bluetooth"
+    label: "Bluetooth"
     color: "#603cba"
     icon: "fish"
     items: 
       - 
         name : "banking"
-        label: "Banking"
+        label: "Searching..."
         color: "#603cba"
         icon : "currency.dollar"
-      -
-        name : "other"
-        label: "Other"
-        color: "#603cba"
-        icon : "cabinet.files.variant"
   - 
     name: "kaddi"
-    label: "蓝牙"
+    label: "Execute"
     color: "#9f00a7"
     icon: "bunny"
